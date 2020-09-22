@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "449574937173",
+    "firebase_url": "https://olxappajay.firebaseio.com",
+    "project_id": "olxappajay",
+    "storage_bucket": "olxappajay.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449574937173:android:003f571cd2be9028736adc",
+        "android_client_info": {
+          "package_name": "com.asijaandroidsolution.olxappajay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449574937173-uqfdlso547k7h6uqaplb076urso2rgl0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANI5P3GGabdt0_7BVjCUVZJzK1A9Ks3Oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449574937173-uqfdlso547k7h6uqaplb076urso2rgl0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

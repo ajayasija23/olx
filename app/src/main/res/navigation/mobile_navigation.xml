@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.asijaandroidsolution.olxappajay.fragments.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <action android:id="@+id/action_home_to_browse_category"
+            app:destination="@+id/nav_browse_categories"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="false"/>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_browse_categories"
+        android:name="com.asijaandroidsolution.olxappajay.fragments.browse.FragmentBrowseCategory"
+        android:label="@string/browse_category"
+        tools:layout="@layout/fragment_browse_category">
+
+        <action android:id="@+id/action_browse_category_to_detail"
+            app:destination="@+id/nav_ads_details"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/nav_browse_categories"
+            app:popUpToInclusive="false"/>
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_sell"
+        android:name="com.asijaandroidsolution.olxappajay.fragments.sell.SellFragment"
+        android:label="@string/title_sell"
+        tools:layout="@layout/fragment_sell">
+
+            <action android:id="@+id/action_sell_fragment_to_inclue"
+                app:destination="@+id/nav_include_details"
+                app:enterAnim="@anim/nav_default_pop_enter_anim"
+                app:exitAnim="@anim/nav_default_pop_exit_anim"
+                app:popUpTo="@id/nav_sell"
+                app:popUpToInclusive="false"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_include_details"
+        android:name="com.asijaandroidsolution.olxappajay.fragments.include_details.IncludeDetails"
+        android:label="@string/include_some_details"
+        tools:layout="@layout/fragment_include_details">
+
+        <action android:id="@+id/action_include_details_to_upload_photo"
+            app:destination="@+id/nav_upload_photo"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/nav_include_details"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_upload_photo"
+        android:name="com.asijaandroidsolution.olxappajay.fragments.uploadphoto.FragmentUploadPhoto"
+        android:label="@string/upload_photos"
+        tools:layout="@layout/fragment_upload_photo">
+
+        <action android:id="@+id/action_upload_photo_to_my_ads"
+            app:destination="@+id/nav_my_ads"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/nav_upload_photo"
+            app:popUpToInclusive="false"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_my_ads"
+        android:name="com.asijaandroidsolution.olxappajay.fragments.myAds.MyAds"
+        android:label="@string/my_ads"
+        tools:layout="@layout/fragment_my_ads">
+        <action
+            android:id="@+id/action_nav_my_ads_to_nav_ads_details"
+            app:destination="@id/nav_ads_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_ads_details"
+        android:name="com.asijaandroidsolution.olxappajay.fragments.adDetails.FragmentAdsDetails"
+        android:label="@string/ads_details"
+        tools:layout="@layout/fragment_ad_details">
+
+    </fragment>
+
+</navigation>
