@@ -10,12 +10,12 @@
         android:orientation="horizontal"
         android:gravity="center">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="0dp"
             android:layout_height="@dimen/dp_120"
             android:id="@+id/ivProfilePic"
             android:layout_weight=".3"
-            android:padding="@dimen/dp_10"
+            android:layout_margin="@dimen/dp_20"
             android:src="@drawable/avatar"/>
         <LinearLayout
             android:layout_width="0dp"
@@ -48,15 +48,37 @@
         android:layout_height="@dimen/dp_1"
         android:background="@android:color/black"/>
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/settings"
         android:layout_marginVertical="@dimen/dp_10"
-        android:drawableLeft="@drawable/ic_settings"
+        android:drawableStart="@drawable/ic_settings"
         android:gravity="center_vertical"
         android:paddingLeft="@dimen/dp_10"
         android:drawablePadding="@dimen/dp_10"
-        android:drawableEnd=""/>
+        android:drawableEnd="@drawable/arrow_right"
+        android:id="@+id/btnSetting"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@android:color/black"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:layout_marginVertical="@dimen/dp_10"
+        android:drawableStart="@drawable/ic_exit"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_10"
+        android:drawablePadding="@dimen/dp_10"
+        android:drawableEnd="@drawable/arrow_right"
+        android:id="@+id/btnLogout"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@android:color/black"/>
 
 </LinearLayout>
